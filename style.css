@@ -1,0 +1,173 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f4ff;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  min-height: 100vh; /* full screen height */
+}
+
+/* ========== CARD (RESPONSIVE SQUARE) ========== */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  /* ✅ always square & responsive */
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 90vmin; /* size based on smaller screen side */
+  max-width: 900px; /* don’t grow too big */
+  max-height: 900px;
+  margin: auto;
+}
+
+/* ========== LEFT PANEL (RESULT) ========== */
+.card__result {
+  flex: 1;
+  background: linear-gradient(#6a5af9, #3c38f0);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__result h2 {
+  font-size: clamp(1rem, 2vw, 1.25rem); /* scales with screen */
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.score {
+  border-radius: 50%;
+  width: 25%; /* ✅ responsive size */
+  aspect-ratio: 1/1; /* keep circle perfect */
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.score__number {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: bold;
+}
+
+.score__of {
+  font-size: clamp(0.6rem, 1.5vw, 0.875rem);
+  opacity: 0.8;
+}
+
+.score__rating {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.score__text {
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  opacity: 0.9;
+  line-height: 1.4;
+  padding: 0 0.5rem;
+}
+
+/* ========== RIGHT PANEL (SUMMARY) ========== */
+.card__summary {
+  flex: 1;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__summary h2 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1rem;
+}
+
+.summary__list {
+  list-style: none;
+  margin: 1rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  font-weight: bold;
+}
+
+/* Category colors */
+.summary__item--reaction {
+  background: #ffe4e4;
+  color: #d14a4a;
+}
+
+.summary__item--memory {
+  background: #fff8e1;
+  color: #c5a100;
+}
+
+.summary__item--verbal {
+  background: #e0f7f7;
+  color: #007777;
+}
+
+.summary__item--visual {
+  background: #f3e6ff;
+  color: #7a42c2;
+}
+
+/* ========== BUTTON ========== */
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #303b5a;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  transition: background 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #1d2539;
+  outline: none;
+}
+
+/* ========== RESPONSIVE (TABLET/DESKTOP) ========== */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row; /* left & right side by side */
+  }
+
+  .card__result,
+  .card__summary {
+    flex: 1;
+  }
+}
