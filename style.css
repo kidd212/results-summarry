@@ -198,3 +198,58 @@ body {
     flex: 1;
   }
 }
+
+/* ===============================
+   Extra Mobile Responsiveness
+   =============================== */
+
+/* Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .card {
+    aspect-ratio: auto; /* remove square lock */
+    max-height: none; /* allow taller content */
+    width: 95%; /* use more screen width */
+    border-radius: 1rem;
+  }
+
+  .card__result,
+  .card__summary {
+    padding: 1rem;
+  }
+
+  .score {
+    width: 60%; /* smaller score circle */
+    max-width: 180px;
+  }
+
+  .score__number {
+    font-size: 2.5rem;
+  }
+
+  .summary__item {
+    height: auto; /* let items expand naturally */
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .card {
+    aspect-ratio: auto; /* also unlock for tablets */
+    max-height: none;
+    flex-direction: column; /* stack left and right */
+  }
+
+  .card__result,
+  .card__summary {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
