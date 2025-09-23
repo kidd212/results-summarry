@@ -240,17 +240,18 @@ body {
 }
 
 /* Tablets (≤ 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .card {
     aspect-ratio: auto; /* also unlock for tablets */
     max-height: none;
-    flex-direction: column; /* stack left and right */
+    width: 85%;
+    flex-direction: row; /* stack left and right */
   }
 
   .card__result,
   .card__summary {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
   }
 }
