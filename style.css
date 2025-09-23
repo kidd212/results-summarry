@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   background: white;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
@@ -28,7 +28,7 @@ body {
   aspect-ratio: 1 / 1; /* keep it square */
   width: 90vmin; /* size based on smaller screen side */
   max-width: 700px; /* don’t grow too big */
-  max-height: 545px;
+  max-height: 400px;
   margin: auto;
 }
 
@@ -39,7 +39,7 @@ body {
   color: white;
   text-align: center;
   padding: 15px;
-  border-radius: 3rem 3rem 3rem 3rem;
+  border-radius: 1.5rem 1.6rem 1.6rem 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +50,8 @@ body {
 .card__result h2 {
   font-size: clamp(1rem, 2vw, 1.25rem); /* scales with screen */
   opacity: 0.8;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .score {
@@ -63,7 +64,7 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  height: 220px;
+  height: 225px;
   /* margin-bottom: 200px; */
 }
 
@@ -85,7 +86,7 @@ body {
 }
 
 .score__text {
-  font-size: clamp(1.2rem, 1vw, 1rem);
+  font-size: clamp(1rem, 1vw, 1rem);
   opacity: 0.9;
   line-height: 1.4;
   padding: 0 0.5rem;
@@ -103,13 +104,13 @@ body {
 
 .card__summary h2 {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .summary__list {
   list-style: none;
-  margin: 0.5rem 0 0 0;
+  margin: 1.5rem 0 0 0;
   flex: 1;
   /* display: flex; */
   flex-direction: column;
@@ -121,36 +122,36 @@ body {
   justify-content: space-between;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
   /* font-size: clamp(0.7rem, 2vw, 0.9rem); */
   font-weight: bold;
   /* border: solid 1px green; */
-  height: 70px;
+  height: 53px;
   align-items: center;
 }
 
 /* Category colors */
 .summary__item--reaction {
   background: #ffe4e4;
-  color: #d14a4a;
+  color: rgba(209, 74, 74, 0.7);
   background-color: rgba(255, 228, 228, 0.5); /* light pink, 50% transparent */
 }
 
 .summary__item--memory {
   background: #fff8e1;
-  color: #c5a100;
+  color: rgba(197, 161, 0, 0.7);
   background-color: rgba(255, 248, 225, 0.5); /* soft yellow, 50% transparent */
 }
 
 .summary__item--verbal {
   background: #e0f7f7;
-  color: #007777;
+  color: rgba(0, 119, 119, 0.7);
   background-color: rgba(224, 247, 247, 0.5); /* aqua tint, 50% transparent */
 }
 
 .summary__item--visual {
   background: #f3e6ff;
-  color: #7a42c2;
+  color: rgba(122, 66, 194, 0.7);
   background-color: rgba(
     243,
     230,
@@ -170,6 +171,14 @@ body {
   cursor: pointer;
   font-size: clamp(0.8rem, 2vw, 1rem);
   transition: background 0.2s ease;
+}
+
+.number {
+  color: black;
+}
+
+.h {
+  color: gray;
 }
 
 .btn:hover,
